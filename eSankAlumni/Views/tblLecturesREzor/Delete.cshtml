@@ -1,0 +1,105 @@
+﻿@model eSankAlumni.Data.tblLecture
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblLecture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSlot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureById)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureById)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePhoto1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePhoto1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LecturePhoto2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LecturePhoto2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotesDocument)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotesDocument)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestDocument)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestDocument)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

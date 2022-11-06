@@ -1,0 +1,42 @@
+﻿@model IEnumerable<eSankAlumni.Data.tblFeedback> 
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<section id="testimonials" class="testimonials">
+    <div class="container">
+
+        <div class="slides-1 swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                            <h4>@Html.DisplayFor(modelItem => item.StudentName)</h4>
+                            <h4>@Html.DisplayNameFor(model => model.eSankalpId)</h4>
+                            <h4>@Html.DisplayNameFor(model => model.LectureId)</h4>
+                            <h4>@Html.DisplayNameFor(model => model.QueId)</h4>
+                            <h4>@Html.DisplayNameFor(model => model.Rating)</h4>
+                            <h4>@Html.DisplayNameFor(model => model.FeedbackDate)</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div><!-- End testimonial item -->
+                }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
+

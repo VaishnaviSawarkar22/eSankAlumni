@@ -1,0 +1,100 @@
+﻿@model IEnumerable<eSankAlumni.Data.tblFeedback>
+
+@{
+    ViewBag.Title = "FeedbackList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">FeedbackList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eSankalpId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeedbackDate)
+        </th>
+        <th></th>
+    </tr>*@
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+
+            <div class="slides-1 swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                                <h3>@Html.DisplayFor(modelItem => item.StudentName)</h3>
+                                <h3>@Html.DisplayNameFor(model => model.eSankalpId)</h3>
+                                <h3>@Html.DisplayNameFor(model => model.LectureId)</h3>
+                                <h3>@Html.DisplayNameFor(model => model.QueId)</h3>
+                                <h3>@Html.DisplayNameFor(model => model.Rating)</h3>
+                                <h3>@Html.DisplayNameFor(model => model.FeedbackDate)</h3>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                      
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+                          
+        </div>
+    </section>
+</table>
+    @*@foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eSankalpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LectureId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeedbackDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FeedbackId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FeedbackId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FeedbackId })
+            </td>
+        </tr>
+    }*@
+
+

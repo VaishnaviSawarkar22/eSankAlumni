@@ -1,0 +1,38 @@
+﻿
+@using eSankAlumni.Models;
+@model LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<div class="login">
+    <div class="container">
+        <h1><center>UserLogin</center></h1><h3><center></center></h3>
+        <h2>Login Page</h2>
+
+        @using (Html.BeginForm("LoginIn", "Login", FormMethod.Post))
+        {
+            <br />
+            <h4> @Html.LabelFor(a => a.UserName)</h4>
+            <div>
+                @Html.TextBoxFor(a => a.UserName, new { @maxlength = "10", @size = "10", @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.UserName)
+
+            </div>
+            <br />
+            <h4>
+                @Html.LabelFor(a => a.Password)
+            </h4>
+            <div>
+                @Html.PasswordFor(a => a.Password, new { @class = "form-control" })
+            </div>
+            <br />
+            <input type="submit" value="Login" class="btn btn-info" />
+        }
+
+    </div>
+</div>

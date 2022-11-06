@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="eSankAlumniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAlumniReg">
+          <Key>
+            <PropertyRef Name="AlumniId" />
+          </Key>
+          <Property Name="AlumniId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AlumniName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="eSankalpId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PassoutYr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TotalExp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CurrentCompany" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CTC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CollegeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Education" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="FeedbackId" />
+          </Key>
+          <Property Name="FeedbackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="eSankalpId" Type="int" Nullable="false" />
+          <Property Name="LectureId" Type="int" Nullable="false" />
+          <Property Name="QueId" Type="int" Nullable="false" />
+          <Property Name="Rating" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FeedbackDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblFeedbackQuest">
+          <Key>
+            <PropertyRef Name="Que" />
+          </Key>
+          <Property Name="Que" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLecture">
+          <Key>
+            <PropertyRef Name="LectureId" />
+          </Key>
+          <Property Name="LectureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LectureDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TimeSlot" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Topic" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Details" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LectureById" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LecturePhoto1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LecturePhoto2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NotesDocument" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestDocument" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="eSankAlumniModelStoreContainer">
+          <EntitySet Name="tblAlumniReg" EntityType="Self.tblAlumniReg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeedback" EntityType="Self.tblFeedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeedbackQuest" EntityType="Self.tblFeedbackQuest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblLecture" EntityType="Self.tblLecture" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="eSankAlumniModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAlumniReg">
+          <Key>
+            <PropertyRef Name="AlumniId" />
+          </Key>
+          <Property Name="AlumniId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlumniName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="eSankalpId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PassoutYr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TotalExp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CurrentCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CTC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CollegeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="FeedbackId" />
+          </Key>
+          <Property Name="FeedbackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="eSankalpId" Type="Int32" Nullable="false" />
+          <Property Name="LectureId" Type="Int32" Nullable="false" />
+          <Property Name="QueId" Type="Int32" Nullable="false" />
+          <Property Name="Rating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FeedbackDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tblFeedbackQuest">
+          <Key>
+            <PropertyRef Name="Que" />
+          </Key>
+          <Property Name="Que" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLecture">
+          <Key>
+            <PropertyRef Name="LectureId" />
+          </Key>
+          <Property Name="LectureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LectureDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TimeSlot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Topic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LectureById" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LecturePhoto1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LecturePhoto2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NotesDocument" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TestDocument" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="eSankAlumniEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAlumniRegs" EntityType="Self.tblAlumniReg" />
+          <EntitySet Name="tblFeedbacks" EntityType="Self.tblFeedback" />
+          <EntitySet Name="tblFeedbackQuests" EntityType="Self.tblFeedbackQuest" />
+          <EntitySet Name="tblLectures" EntityType="Self.tblLecture" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="eSankAlumniModelStoreContainer" CdmEntityContainer="eSankAlumniEntities">
+          <EntitySetMapping Name="tblAlumniRegs">
+            <EntityTypeMapping TypeName="eSankAlumniModel.tblAlumniReg">
+              <MappingFragment StoreEntitySet="tblAlumniReg">
+                <ScalarProperty Name="AlumniId" ColumnName="AlumniId" />
+                <ScalarProperty Name="AlumniName" ColumnName="AlumniName" />
+                <ScalarProperty Name="eSankalpId" ColumnName="eSankalpId" />
+                <ScalarProperty Name="PassoutYr" ColumnName="PassoutYr" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="TotalExp" ColumnName="TotalExp" />
+                <ScalarProperty Name="CurrentCompany" ColumnName="CurrentCompany" />
+                <ScalarProperty Name="CTC" ColumnName="CTC" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeedbacks">
+            <EntityTypeMapping TypeName="eSankAlumniModel.tblFeedback">
+              <MappingFragment StoreEntitySet="tblFeedback">
+                <ScalarProperty Name="FeedbackId" ColumnName="FeedbackId" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="eSankalpId" ColumnName="eSankalpId" />
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+                <ScalarProperty Name="QueId" ColumnName="QueId" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="FeedbackDate" ColumnName="FeedbackDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeedbackQuests">
+            <EntityTypeMapping TypeName="eSankAlumniModel.tblFeedbackQuest">
+              <MappingFragment StoreEntitySet="tblFeedbackQuest">
+                <ScalarProperty Name="Que" ColumnName="Que" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLectures">
+            <EntityTypeMapping TypeName="eSankAlumniModel.tblLecture">
+              <MappingFragment StoreEntitySet="tblLecture">
+                <ScalarProperty Name="LectureId" ColumnName="LectureId" />
+                <ScalarProperty Name="LectureDate" ColumnName="LectureDate" />
+                <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="LectureById" ColumnName="LectureById" />
+                <ScalarProperty Name="LecturePhoto1" ColumnName="LecturePhoto1" />
+                <ScalarProperty Name="LecturePhoto2" ColumnName="LecturePhoto2" />
+                <ScalarProperty Name="NotesDocument" ColumnName="NotesDocument" />
+                <ScalarProperty Name="TestDocument" ColumnName="TestDocument" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

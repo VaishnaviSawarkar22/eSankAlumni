@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/Feedback.js"></script>
+
+
+<h2 style="text-align:center">Feedback</h2>
+
+
+
+<div class="row gy-4 mt-4">
+    <div class="col-lg-2">
+    </div>
+
+    <div class="col-lg-8">
+
+        <div class="row">
+            <div class="col-md-6 form-group">
+                StudentName <br>
+                <input id="txtStudentName" class="form-control p-2" type="text" placeholder="Your Name" required /><br>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                eSankalpId <br>
+                <input id="txteSankalpId" class="form-control p-2" type="text" placeholder="ID" required /><br>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                LectureId<br>
+                <input id="txtLectureId" class="form-control p-2" type="text" placeholder="ID" required /><br>
+            </div>
+
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                QueId<br>
+                <input id="txtQueId" class="form-control p-2" type="text" placeholder="ID" required /><br>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                Rating <br>
+                <input id="txtRating" class="form-control p-2" type="text" placeholder="Your Rating" required /><br>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                FeedbackDate<br>
+                <input id="txtDString" class="form-control p-2" type="date" /><br>
+            </div>
+            <br>
+            <center><input id="BtnSave" type="button" class="btn btn-success" value="SAVE" onclick="saveFeedback()" /></center>
+            <div class="col-lg-2">
+            </div>
+            <br>
+            <br>
+
+            @*<h2 style="text-align:center">Feedback List</h2>
+            <div class="col-sm-5">
+                <div class="col-sm-10">
+                    <table id="tblFeedback" border="1">
+                        <thead>
+                            <tr>
+                                <th>FeedbackId</th>
+                                <th>StudentName</th>
+                                <th>eSankalpId</th>
+                                <th>LectureId</th>
+                                <th>QueId</th>
+                                <th>Rating</th>
+                                <th>FeedbackDate</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+            
+        
+
+    
+
+
+
+
+
+
+@*<body>
+        <div class="container-fluid">
+            <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo col-md-12">
+                <div class="wrapper wrapper--w960 col-md-4">
+                    <div class="card card-2">
+                        <div class="card-heading"></div>
+                        <div class="card-body">
+
+                            <div class="panel-body p30">
+                                <div class="row">
+                                    <div class="col-md-8">
+
+                                        StudentName <br>
+                                        <input id="txtStudentName" class="form-control p-2" type="text" /><br>
+                                        eSankalpId <br>
+                                        <input id="txteSankalpId" class="form-control p-2" type="text" /><br>
+                                        LectureId<br>
+                                        <input id="txtLectureId" class="form-control p-2" type="text" /><br>
+                                        QueId<br>
+                                        <input id="txtQueId" class="form-control p-2" type="text" /><br>
+                                        Rating <br>
+                                        <input id="txtRating" class="form-control p-2" type="text" /><br>
+                                        FeedbackDate <br>
+                                        <input id="txtDString" class="form-control p-2" type="date" /><br>
+                                        <br>
+                                        <center><input id="BtnSave" type="button" class="btn btn-success" value="SAVE" onclick="saveFeedback()" /></center>
+
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>*@

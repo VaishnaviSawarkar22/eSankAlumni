@@ -1,0 +1,88 @@
+﻿@model IEnumerable<eSankAlumni.Data.tblLecture>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Topic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureById)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LecturePhoto1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LecturePhoto2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotesDocument)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestDocument)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LectureDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeSlot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Topic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LectureById)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LecturePhoto1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LecturePhoto2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotesDocument)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestDocument)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LectureId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LectureId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LectureId })
+        </td>
+    </tr>
+}
+
+</table>

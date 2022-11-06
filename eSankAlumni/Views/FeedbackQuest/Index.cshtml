@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/FeedbackQuest.js"></script>
+
+<h2 style="text-align:center">Feedback Question</h2>
+
+Question <br>
+
+<input type="text" class="form-control p-2" id="TxtQuestion" placeholder="Enter your Question" /><br>
+
+<center><input type="button" class="btn btn-success" value="Submit" onclick="saveFeedbackQuest()" /></center>
